@@ -9,10 +9,7 @@ user_session_id = uuid.uuid4()
 
 logger = get_logger(__name__)
 st.session_state.disabled = False
-st.title("Llama-v2 Chat Demo with Message History")
-st.markdown(
-    "Built by [Nirant Kasliwal](https://nirantk.com/about/). Sponsored by [The GenerativeAI Community 🇮🇳](https://nirantk.com/community)"
-)
+st.title("Llama-v2 Chat with Message History")
 os.environ["REPLICATE_API_TOKEN"] = st.secrets["REPLICATE_API_TOKEN"]
 llama_family = {
     "Llama7B-v2-Chat": "a16z-infra/llama7b-v2-chat:4f0a4744c7295c024a1de15e1a63c880d3da035fa1f49bfd344fe076074c8eea",
